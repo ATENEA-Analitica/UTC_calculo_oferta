@@ -1,0 +1,29 @@
+# Datos sensibles e insumos
+data/*.RData
+data/*.rdata
+
+# Resultados generados
+output/*.xlsx
+
+# Archivos de entorno R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rprofile
+
+# renv (mantener renv.lock y renv/activate.R en git)
+renv/library/
+renv/local/
+renv/staging/
+renv/cellar/
+renv/sandbox/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Archivos originales (pre-modularizacion)
+UTC4_Calculo_Ofertas_VF.R
+UTC4_Insumo_Oferta.RData
+UTC4_OFERTA_VF_20260311.xlsx

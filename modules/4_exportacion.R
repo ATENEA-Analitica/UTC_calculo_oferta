@@ -1,0 +1,43 @@
+#===============================================================================
+# UTC4 - MODULO 4: EXPORTACION DE RESULTADOS
+# Genera archivo Excel y tablas resumen
+#===============================================================================
+
+#-------------------------------------------------------------------------------
+# EXPORTAR RESULTADOS OFERTA GENERAL
+#-------------------------------------------------------------------------------
+
+RESULTADOS <- merge(x=LISTADO_OFERTA_PROPUESTA,
+                    y= ORDENAMIENTO_PROG[,c("CODIGO_INSTITUCION","CODIGO_SNIES_DEL_PROGRAMA", "CUPO_ASIGNADO_MOMENTO1","COSTO_CUPOS_ASIGNADO_MOMENTO1","CUPO_ASIGNADO_MOMENTO2","COSTO_CUPOS_ASIGNADO_MOMENTO2","CUPO_ASIGNADO_TOTAL","COSTO_CUPOS_ASIGNADOS_TOTAL")],
+                    by=c("CODIGO_INSTITUCION","CODIGO_SNIES_DEL_PROGRAMA"), all = FALSE)
+
+ARCHIVO_SALIDA <- paste0("output/UTC4_OFERTA_VF_", format(Sys.Date(), "%Y%m%d"), ".xlsx")
+
+write.xlsx(RESULTADOS, ARCHIVO_SALIDA, sheetName="UTC4_PROGRAMAS", append=TRUE)
+wb <- loadWorkbook(ARCHIVO_SALIDA)
+addWorksheet(wb,"PRESUPUESTO")
+writeData(wb,"PRESUPUESTO",PRESUPUESTO)
+saveWorkbook(wb, ARCHIVO_SALIDA, overwrite = TRUE)
+
+#TABLA CON CUPOS ASIGNADOS POR IES
+RESULTADOS %>% group_by(CODIGO_INSTITUCION,NOMBRE_INSTITUCION) %>%  summarize(
+  MOMENTO1=sum(CUPO_ASIGNADO_MOMENTO1),
+  MOMENTO2=sum(CUPO_ASIGNADO_MOMENTO2),
+  TOTAL_CUPOS_ASIGNADOS=sum(CUPO_ASIGNADO_TOTAL),
+  COSTO_CUPOS_ASIGNADOS=format(sum(COSTO_CUPOS_ASIGNADOS_TOTAL), big.mark = ".", decimal.mark = ",", nsmall = 2))
+
+#TABLA CON CUPOS ASIGNADOS POR IES Y PROGRAMA
+RESULTADOS %>% group_by(CODIGO_INSTITUCION,NOMBRE_INSTITUCION,CODIGO_SNIES_DEL_PROGRAMA,NOMBRE_DEL_PROGRAMA) %>%  summarize(
+  MOMENTO1=sum(CUPO_ASIGNADO_MOMENTO1),
+  MOMENTO2=sum(CUPO_ASIGNADO_MOMENTO2),
+  TOTAL_CUPOS_ASIGNADOS=sum(CUPO_ASIGNADO_TOTAL),
+  COSTO_CUPOS_ASIGNADOS=format(sum(COSTO_CUPOS_ASIGNADOS_TOTAL), big.mark = ".", decimal.mark = ",", nsmall = 2))
+
+#SUMATORIA TOTAL DE CUPOS ASIGNADOS
+sum(RESULTADOS$CUPO_ASIGNADO_TOTAL)
+#SUMATORIA COSTO TOTAL DE CUPOS ASIGNADOS
+format(sum(RESULTADOS$COSTO_CUPOS_ASIGNADOS_TOTAL), big.mark = ".", decimal.mark = ",", nsmall = 2)
+
+
+# BORRAR VARIABLES Y DATOS QUE SE USARON EN LOS CALCULOS
+rm(EVALUAR_PROG,COSTO_CUPOS,CUPO_CALCULADO,CUPO_OFERTADO,ID_PROGRAMA,TOTAL_COHORTE,wb )
