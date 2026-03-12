@@ -1,7 +1,3 @@
-# Datos sensibles e insumos
-data/*.RData
-data/*.rdata
-
 # Resultados generados
 output/*.xlsx
 
@@ -25,5 +21,4 @@ Thumbs.db
 
 # Archivos originales (pre-modularizacion)
 UTC4_Calculo_Ofertas_VF.R
-UTC4_Insumo_Oferta.RData
 UTC4_OFERTA_VF_20260311.xlsx

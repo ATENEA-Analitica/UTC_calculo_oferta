@@ -1,4 +1,4 @@
-# Mecanismo de Seleccion y Aprobacion de Ofertas Tecnicas: Convocatoria UTC4 (Universidad a Tu Colegio)
+# Mecanismo de Seleccion y Aprobacion de Ofertas Tecnicas: Convocatoria UTC4 (Estrategia LA U EN TU COLEGIO)
 
 <div align="center">
 
@@ -32,7 +32,7 @@
 
 ## 1. Introduccion y Contexto
 
-Este repositorio contiene la implementacion tecnica del **Algoritmo de Seleccion y Aprobacion de Ofertas Tecnicas** para la cuarta convocatoria del programa "Universidad a Tu Colegio" (UTC4). Este software es el responsable de evaluar las propuestas presentadas por las Instituciones de Educacion Superior (IES), calcular los puntajes de cada programa ofertado, establecer el ranking de priorizacion y asignar los cupos disponibles dentro del presupuesto aprobado.
+Este repositorio contiene la implementacion tecnica del **Algoritmo de Seleccion y Aprobacion de Ofertas Tecnicas** para la cuarta convocatoria de la estrategia "LA U EN TU COLEGIO" (UTC4). Este software es el responsable de evaluar las propuestas presentadas por las Instituciones de Educacion Superior (IES), calcular los puntajes de cada programa ofertado, establecer el ranking de priorizacion y asignar los cupos disponibles dentro del presupuesto aprobado.
 
 El algoritmo ha sido disenado bajo los principios de:
 * **Transparencia:** Reglas de negocio codificadas explicitamente sin "cajas negras".
