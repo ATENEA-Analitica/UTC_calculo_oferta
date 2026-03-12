@@ -289,7 +289,6 @@ Siga estos pasos estrictamente para replicar los resultados oficiales.
 
 3. **Cargar Insumos:**
    Asegurese de que el archivo `UTC4_Insumo_Oferta.RData` (provisto por el equipo de datos) se encuentre en la carpeta `data/`.
-   *Nota: Este archivo no esta en el repositorio por politica de proteccion de datos.*
 
 4. **Ejecutar Algoritmo:**
    Abra el archivo **`UTC4_Main.R`** y ejecute con `source("UTC4_Main.R")` o el boton "Source" de RStudio.
