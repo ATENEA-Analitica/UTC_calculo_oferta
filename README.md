@@ -8,7 +8,6 @@
 ![Reproducibilidad](https://img.shields.io/badge/Reproducibilidad-renv%20%7C%20Seed-orange?style=for-the-badge)
 
 **Agencia Distrital para la Educacion Superior, la Ciencia y la Tecnologia (ATENEA)**   
-*Gerencia de Estrategia*  
 *Subgerencia de Análisis de Información y Gestión del Conocimiento*
 
 </div>
