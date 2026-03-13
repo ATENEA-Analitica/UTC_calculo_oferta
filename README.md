@@ -27,6 +27,7 @@
 5. [Diccionario de Datos (Inputs y Outputs)](#5-diccionario-de-datos)
 6. [Instrucciones de Ejecucion](#6-instrucciones-de-ejecucion)
 7. [Garantia de Reproducibilidad](#7-garantia-de-reproducibilidad)
+8. [Uso del Código](#8-uso-del-codigo)
 
 ---
 
@@ -310,7 +311,7 @@ Este algoritmo es deterministico. Esto significa que **siempre generara exactame
 3. **Versionamiento:** El codigo fuente esta bajo control de versiones (git), permitiendo rastrear cualquier cambio en la logica.
 
 ---
-## 8. Uso del Código
+## 8. Uso del Codigo
 
 Autorizacion de Uso (CC BY)
 
