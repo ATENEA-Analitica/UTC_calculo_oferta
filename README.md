@@ -1,9 +1,9 @@
-# Mecanismo de Seleccion y Aprobacion de Ofertas Tecnicas: Convocatoria UTC4 (Estrategia LA U EN TU COLEGIO)
+# Mecanismo de Asignacion de Cupos: Convocatoria UTC4 (Estrategia LA U EN TU COLEGIO)
 
 <div align="center">
 
 ![R Version](https://img.shields.io/badge/R-4.5.1%2B-blue?style=for-the-badge&logo=r)
-![License](https://img.shields.io/badge/Licencia-Propiedad%20ATENEA-red?style=for-the-badge)
+![License](https://img.shields.io/badge/Licencia-CC%20BY-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Estado-Producci%C3%B3n%20Auditada-success?style=for-the-badge)
 ![Reproducibilidad](https://img.shields.io/badge/Reproducibilidad-renv%20%7C%20Seed-orange?style=for-the-badge)
 
