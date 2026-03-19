@@ -14,6 +14,8 @@ View(LISTADO_OFERTA_PROPUESTA[,c("CODIGO_INSTITUCION","CODIGO_SNIES_DEL_PROGRAMA
 #===============================================================================
 # CALCULAR PUNTAJE DESCUENTO
 #===============================================================================
+# Para el cálculo del puntaje, el descuento adicional se trunca a un máximo de 15% según alcance de la Gerencia de Posmedia (rad. 3-2026-5773); el valor original se mantiene para efectos económicos
+LISTADO_OFERTA_PROPUESTA[LISTADO_OFERTA_PROPUESTA$`%_ADICIONAL`> 0.15,"%_ADICIONAL"] <- 0.15
 LISTADO_OFERTA_PROPUESTA <- LISTADO_OFERTA_PROPUESTA %>%  mutate(DESCUENTO_ADICIONAL_MIN = min(`%_ADICIONAL`), DESCUENTO_ADICIONAL_MAX = max(`%_ADICIONAL`))
 LISTADO_OFERTA_PROPUESTA$TOTAL_PUNTAJE_DESCUENTO <- 30 * ((LISTADO_OFERTA_PROPUESTA$`%_ADICIONAL`  - LISTADO_OFERTA_PROPUESTA$DESCUENTO_ADICIONAL_MIN)/(LISTADO_OFERTA_PROPUESTA$DESCUENTO_ADICIONAL_MAX-LISTADO_OFERTA_PROPUESTA$DESCUENTO_ADICIONAL_MIN))
 

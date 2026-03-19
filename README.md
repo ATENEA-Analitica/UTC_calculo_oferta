@@ -125,10 +125,11 @@ $$PuntajeGlobal = PuntajeFijo + PuntajeISOES + PuntajeDescuento$$
 
 3. **Puntaje Descuento Adicional (Max 30 puntos)**
    * Basado en el porcentaje de descuento adicional (`%_ADICIONAL`) ofrecido por la IES.
-   * **Metodo:** Normalizacion Min-Max escalada a 30 puntos.
+   * **Truncamiento:** Conforme al alcance de la Gerencia de Posmedia (rad. 3-2026-5773), para efectos del calculo del puntaje el descuento adicional se trunca a un maximo de **15%**. El valor original se mantiene para efectos economicos.
+   * **Metodo:** Normalizacion Min-Max escalada a 30 puntos (sobre el valor truncado).
    * **Formula:**
    $$PuntajeDescuento = 30 \times \frac{Descuento_{programa} - Descuento_{min}}{Descuento_{max} - Descuento_{min}}$$
-   * La IES que ofrece mayor descuento recibe 30 puntos; la de menor descuento recibe 0.
+   * La IES que ofrece mayor descuento (hasta 15%) recibe 30 puntos; la de menor descuento recibe 0.
 
 ---
 
