@@ -2,6 +2,8 @@
 # UTC4 - MODULO 1: CALCULO DE PUNTAJES
 # Calcula: Puntaje ISOES, Puntaje Descuento, Puntaje Global
 #===============================================================================
+# Para el calculo, se restringe las IES FESNA Y CUN según alcance de la Gerencia de Posmedia (rad. 3-2026-5931)
+LISTADO_OFERTA_PROPUESTA<- LISTADO_OFERTA_PROPUESTA[!LISTADO_OFERTA_PROPUESTA$CODIGO_INSTITUCION %in% c(4719,4813),]
 
 #===============================================================================
 # CALCULAR PUNTAJE ISOES
