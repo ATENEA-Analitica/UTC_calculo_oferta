@@ -112,6 +112,8 @@ $$PuntajeGlobal = PuntajeFijo + PuntajeISOES + PuntajeDescuento$$
 
 #### Desglose de Componentes:
 
+* **Truncamiento:** Conforme al alcance de la Gerencia de Posmedia (rad. 3-2026-5931), para efectos del calculo del puntaje se restringe las IES FESNA Y CUN.
+
 1. **Puntaje Fijo (Precalculado en insumos)**
    * Componente que llega calculado en la base `LISTADO_OFERTA_PROPUESTA`.
    * Corresponde a criterios de evaluacion tecnica previamente validados.
